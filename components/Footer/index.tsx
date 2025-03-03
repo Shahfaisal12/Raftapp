@@ -178,7 +178,7 @@ const Footer = () => {
                       rel="noopener noreferrer"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Maple street 123  Islamabad
+                      Maple street 123 Islamabad
                     </a>
                   </li>
                   <li>
