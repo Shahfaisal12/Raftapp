@@ -33,7 +33,7 @@ const WhoWeAre = () => {
                     />
                   </div>
                   <p className="font-dancing text-lg italic leading-relaxed text-black-300 dark:text-gray-300 md:text-xl">
-                    Innovation isn't just about building technology—it's about
+                    Innovation isnt just about building technology—its about
                     creating experiences that transform the way we live, work,
                     and connect.
                   </p>

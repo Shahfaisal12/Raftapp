@@ -138,12 +138,12 @@ export default function CurrentPosition() {
 
         <section className="mx-auto max-w-2xl py-12 text-center">
           <h1 className="mb-5 text-2xl font-bold leading-tight text-black dark:text-white sm:text-3xl sm:leading-tight md:text-4xl md:leading-tight">
-            Can't Find a Role That Fits?
+            Cant Find a Role That Fits?
           </h1>
           <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-            We're always on the lookout for passionate, driven individuals who
-            want to make a difference. If you don't see a position that fits
-            your skills, send us your resume—we'd love to hear from you!
+            Were always on the lookout for passionate, driven individuals who
+            want to make a difference. If you dont see a position that fits
+            your skills, send us your resume—wed love to hear from you!
           </p>
 
           <Link
