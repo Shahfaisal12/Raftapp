@@ -10,12 +10,6 @@ import Video from "@/components/Video";
 import { Metadata } from "next";
 import TeamPage from "./team/team";
 
-export const metadata: Metadata = {
-  title: "Free Next.js Template for Startup and SaaS",
-  description: "This is Home for Startup Nextjs Template",
-  // other metadata
-};
-
 export default function Home() {
   return (
     <>
