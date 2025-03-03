@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fontsource/dancing-script": "^5.2.5",
     "@fontsource/montserrat": "^5.2.0",
     "eslint": "8.33.0",

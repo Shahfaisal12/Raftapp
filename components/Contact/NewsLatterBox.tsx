@@ -1,9 +1,45 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useState } from "react";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  
+  // Replace this URL with your actual Mailchimp form action URL
+  const MAILCHIMP_URL = "https://yourdatacenter.usX.list-manage.com/subscribe/post?u=xxxx&id=xxxx";
+  // const MAILCHIMP_URL = "https://us21.list-manage.com/subscribe/post?u=your_user_id&id=your_list_id";
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = MAILCHIMP_URL;
+    form.target = "_blank"; 
+
+    const emailField = document.createElement("input");
+    emailField.type = "hidden";
+    emailField.name = "EMAIL";
+    emailField.value = email;
+
+    const nameField = document.createElement("input");
+    nameField.type = "hidden";
+    nameField.name = "FNAME"; 
+    nameField.value = name;
+
+    form.appendChild(emailField);
+    form.appendChild(nameField);
+    document.body.appendChild(form);
+    form.submit();
+
+    setMessage("Subscription successful! Check your email.");
+  };
 
   return (
     <div
@@ -16,17 +52,22 @@ const NewsLatterBox = () => {
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
       Subscribe for updates on innovations, trends, and exclusive industry insights—delivered to your inbox!
       </p>
-      <div>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="name"
+          value={name}
           placeholder="Enter your name"
+          onChange={(e) => setName(e.target.value)}
           className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
           type="email"
           name="email"
+          value={email}
           placeholder="Enter your email"
+          onChange={(e) => setEmail(e.target.value)}
+          required
           className="border-stroke dark:text-body-color-dark dark:shadow-two mb-10 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
         />
         <input
@@ -37,8 +78,8 @@ const NewsLatterBox = () => {
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
         Please dont send spam emails.
         </p>
-      </div>
-
+      </form>
+      {message && <p className="text-center text-base text-green-600">{message}</p>}
       <div>
         <span className="absolute left-2 top-7">
           <svg
