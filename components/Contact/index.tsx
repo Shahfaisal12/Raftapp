@@ -18,11 +18,18 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const templateParams = {
+      to_name: "Raftapp Support",
+      from_name: formData.name, 
+      email: formData.email, 
+      message: formData.message, 
+    };
+
     emailjs
       .send(
         "service_qah9eo6", // Replace with your EmailJS Service ID
         "template_mtarpqm", // Replace with your EmailJS Template ID
-        formData,
+        templateParams,
         "92YaF6lO4vLxY2ELA" // Replace with your EmailJS Public Key
       )
       .then(
