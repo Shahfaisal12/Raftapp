@@ -106,14 +106,14 @@ export default function CurrentPosition() {
                             src="/images/career/type.svg"
                             alt="job type"
                             className="block w-full dark:hidden"
-                            width={80}
+                            width={20}
                             height={20}
                           />
                           <Image
                             src="/images/career/type.svg"
                             alt="job type dark"
                             className="hidden w-full dark:block"
-                            width={80}
+                            width={20}
                             height={20}
                           />
                         </span>
@@ -125,14 +125,14 @@ export default function CurrentPosition() {
                             src="/images/career/salary.svg"
                             alt="salary dark"
                             className="hidden w-full dark:block"
-                            width={80}
+                            width={20}
                             height={20}
                           />
                           <Image
                             src="/images/career/salary.svg"
                             alt="salary"
                             className="block w-full dark:hidden"
-                            width={80}
+                            width={20}
                             height={20}
                           />
                         </span>
