@@ -104,7 +104,14 @@ export default function CurrentPosition() {
                         <span className="mr-2 inline-block h-4 w-4">
                           <Image
                             src="/images/career/type.svg"
-                            alt="logo"
+                            alt="job type"
+                            className="block w-full dark:hidden"
+                            width={80}
+                            height={20}
+                          />
+                          <Image
+                            src="/images/career/type.svg"
+                            alt="job type dark"
                             className="hidden w-full dark:block"
                             width={80}
                             height={20}
@@ -116,8 +123,15 @@ export default function CurrentPosition() {
                         <span className="mr-2 inline-block h-4 w-4">
                           <Image
                             src="/images/career/salary.svg"
-                            alt="logo"
+                            alt="salary dark"
                             className="hidden w-full dark:block"
+                            width={80}
+                            height={20}
+                          />
+                          <Image
+                            src="/images/career/salary.svg"
+                            alt="salary"
+                            className="block w-full dark:hidden"
                             width={80}
                             height={20}
                           />

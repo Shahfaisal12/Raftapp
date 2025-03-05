@@ -11,8 +11,8 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
             <Image
               src={icon}
               alt={title}
-              width={140}
-              height={30}
+              width={40}
+              height={40}
               className=""
             />
           ) : (
